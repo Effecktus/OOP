@@ -1,0 +1,16 @@
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\bin\Debug\Lab_2.exe.config
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\bin\Debug\Lab_2.exe
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\bin\Debug\Lab_2.pdb
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.csproj.AssemblyReference.cache
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.Form1.resources
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.FormCircle.resources
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.FormEllipse.resources
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.FormRectangle.resources
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.FormSquare.resources
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.Properties.Resources.resources
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.csproj.GenerateResource.cache
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.csproj.CoreCompileInputs.cache
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.exe
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.pdb
+C:\Users\fqlfh\Documents\Cods\OOP\Lab_2\obj\Debug\Lab_2.FormRing.resources

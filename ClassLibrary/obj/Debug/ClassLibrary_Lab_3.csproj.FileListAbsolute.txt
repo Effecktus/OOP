@@ -1,0 +1,6 @@
+C:\Users\fqlfh\Documents\Cods\OOP\ClassLibrary_Lab_3\bin\Debug\ClassLibrary_Lab_3.dll
+C:\Users\fqlfh\Documents\Cods\OOP\ClassLibrary_Lab_3\bin\Debug\ClassLibrary_Lab_3.pdb
+C:\Users\fqlfh\Documents\Cods\OOP\ClassLibrary_Lab_3\obj\Debug\ClassLibrary_Lab_3.csproj.AssemblyReference.cache
+C:\Users\fqlfh\Documents\Cods\OOP\ClassLibrary_Lab_3\obj\Debug\ClassLibrary_Lab_3.csproj.CoreCompileInputs.cache
+C:\Users\fqlfh\Documents\Cods\OOP\ClassLibrary_Lab_3\obj\Debug\ClassLibrary_Lab_3.dll
+C:\Users\fqlfh\Documents\Cods\OOP\ClassLibrary_Lab_3\obj\Debug\ClassLibrary_Lab_3.pdb

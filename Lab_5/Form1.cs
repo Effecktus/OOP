@@ -11,11 +11,10 @@ namespace Lab_5
     public partial class Form1 : Form
     {
         private List<ClassFigure> figures = new List<ClassFigure>();
-        private List<int> types = new List<int>();
         private readonly Graphics gfx;
         private readonly Bitmap bmp;
         private readonly Random rand = new Random();
-        private int sel_type = -1;
+        private SelectFigure sel_type = SelectFigure.NotSelect;
         public Form1()
         {
             InitializeComponent();
@@ -39,15 +38,15 @@ namespace Lab_5
                 gfx.Clear(Color.White);
                 for (int i = 0; i < figures.Count; i++)
                 {
-                    if (figures[i] is ClassCircle circle && figures[i].Point.X - circle.Radius >= 15 && (sel_type == 1 || sel_type == -1))
+                    if (figures[i] is ClassCircle circle && figures[i].Point.X - circle.Radius >= 15 && (sel_type == SelectFigure.Round || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X - 10, figures[i].Point.Y);
                     }
-                    else if (figures[i] is ClassEllipse ellipse && figures[i].Point.X - ellipse.Width_Size / 2 >= 15 && (sel_type == 1 || sel_type == -1))
+                    else if (figures[i] is ClassEllipse ellipse && figures[i].Point.X - ellipse.Width_Size / 2 >= 15 && (sel_type == SelectFigure.Round || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X - 10, figures[i].Point.Y);
                     }
-                    else if (figures[i] is ClassQuadrangle quadrangle && figures[i].Point.X - quadrangle.Width_Size >= 15 && (sel_type == 2 || sel_type == -1))
+                    else if (figures[i] is ClassQuadrangle quadrangle && figures[i].Point.X - quadrangle.Width_Size >= 15 && (sel_type == SelectFigure.Quadrangular || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X - 10, figures[i].Point.Y);
                     }
@@ -62,15 +61,15 @@ namespace Lab_5
                 gfx.Clear(Color.White);
                 for (int i = 0; i < figures.Count; i++)
                 {
-                    if (figures[i] is ClassCircle circle && figures[i].Point.X + circle.Radius <= 1145 && (sel_type == 1 || sel_type == -1))
+                    if (figures[i] is ClassCircle circle && figures[i].Point.X + circle.Radius <= 1145 && (sel_type == SelectFigure.Round || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X + 10, figures[i].Point.Y);
                     }
-                    else if (figures[i] is ClassEllipse ellipse && figures[i].Point.X + ellipse.Width_Size / 2 <= 1145 && (sel_type == 1 || sel_type == -1))
+                    else if (figures[i] is ClassEllipse ellipse && figures[i].Point.X + ellipse.Width_Size / 2 <= 1145 && (sel_type == SelectFigure.Round || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X + 10, figures[i].Point.Y);
                     }
-                    else if (figures[i] is ClassQuadrangle quadrangle && figures[i].Point.X + quadrangle.Width_Size / 2 <= 1145 && (sel_type == 2 || sel_type == -1))
+                    else if (figures[i] is ClassQuadrangle quadrangle && figures[i].Point.X + quadrangle.Width_Size / 2 <= 1145 && (sel_type == SelectFigure.Quadrangular || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X + 10, figures[i].Point.Y);
                     }
@@ -85,15 +84,15 @@ namespace Lab_5
                 gfx.Clear(Color.White);
                 for (int i = 0; i < figures.Count; i++)
                 {
-                    if (figures[i] is ClassCircle circle && figures[i].Point.Y - circle.Radius >= 15 && (sel_type == 1 || sel_type == -1))
+                    if (figures[i] is ClassCircle circle && figures[i].Point.Y - circle.Radius >= 15 && (sel_type == SelectFigure.Round || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X, figures[i].Point.Y - 10);
                     }
-                    else if (figures[i] is ClassEllipse ellipse && figures[i].Point.Y - ellipse.Height_Size / 2 >= 15 && (sel_type == 1 || sel_type == -1))
+                    else if (figures[i] is ClassEllipse ellipse && figures[i].Point.Y - ellipse.Height_Size / 2 >= 15 && (sel_type == SelectFigure.Round || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X, figures[i].Point.Y - 10);
                     }
-                    else if (figures[i] is ClassQuadrangle quadrangle && figures[i].Point.Y - quadrangle.Height_Size / 2 >= 15 && (sel_type == 2 || sel_type == -1))
+                    else if (figures[i] is ClassQuadrangle quadrangle && figures[i].Point.Y - quadrangle.Height_Size / 2 >= 15 && (sel_type == SelectFigure.Quadrangular || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X, figures[i].Point.Y - 10);
                     }
@@ -108,15 +107,15 @@ namespace Lab_5
                 gfx.Clear(Color.White);
                 for (int i = 0; i < figures.Count; i++)
                 {
-                    if (figures[i] is ClassCircle circle && figures[i].Point.Y + circle.Radius <= 735 && (sel_type == 1 || sel_type == -1))
+                    if (figures[i] is ClassCircle circle && figures[i].Point.Y + circle.Radius <= 735 && (sel_type == SelectFigure.Round || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X, figures[i].Point.Y + 10);
                     }
-                    else if (figures[i] is ClassEllipse ellipse && figures[i].Point.Y + ellipse.Height_Size / 2 <= 735 && (sel_type == 1 || sel_type == -1))
+                    else if (figures[i] is ClassEllipse ellipse && figures[i].Point.Y + ellipse.Height_Size / 2 <= 735 && (sel_type == SelectFigure.Round || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X, figures[i].Point.Y + 10);
                     }
-                    else if (figures[i] is ClassQuadrangle quadrangle && figures[i].Point.Y + quadrangle.Height_Size / 2 <= 735 && (sel_type == 2 || sel_type == -1))
+                    else if (figures[i] is ClassQuadrangle quadrangle && figures[i].Point.Y + quadrangle.Height_Size / 2 <= 735 && (sel_type == SelectFigure.Quadrangular || sel_type == SelectFigure.NotSelect))
                     {
                         figures[i].MoveTo(gfx, figures[i].Point.X, figures[i].Point.Y + 10);
                     }
@@ -128,7 +127,7 @@ namespace Lab_5
             }
             PictureBoxRefresh();
         }
-        enum TypeFigute
+        enum TypeFigure
         {
             Circle,
             Ellipse,
@@ -136,44 +135,44 @@ namespace Lab_5
             Rectangle,
             Rhombus,
             Square,
-            Trapezium,
+            Trapezium
         }
 
         private void Create_Click(object sender, EventArgs e)
         {
-            int num, size1, size2;
+            int size1, size2;
+            TypeFigure type;
             ClassPoint point;
             for (int i = 0; i < 20;  i++)
             {
                 point = new ClassPoint(rand.Next(50, pictureBox1.Width - 50), rand.Next(50, pictureBox1.Height - 50));
-                num = rand.Next(0, 7);
+                type = (TypeFigure)rand.Next(0, 7);
                 size1 = rand.Next(20, 100);
                 size2 = rand.Next(20, 100);
-                switch (num) 
+                switch (type) 
                 {
-                    case (int)TypeFigute.Circle:
+                    case TypeFigure.Circle:
                         figures.Add(new ClassCircle(point, size1 / 2, Color.MediumAquamarine));
                         break;
-                    case (int)TypeFigute.Ellipse:
+                    case TypeFigure.Ellipse:
                         figures.Add(new ClassEllipse(point, size1, size2));
                         break;
-                    case (int)TypeFigute.Ring:
+                    case TypeFigure.Ring:
                         figures.Add(new ClassRing(point, size1 / 2));
                         break;
-                    case (int)TypeFigute.Rectangle:
+                    case TypeFigure.Rectangle:
                         figures.Add(new ClassRectangle(point, size1, size2));
                         break;
-                    case (int)TypeFigute.Rhombus:
+                    case TypeFigure.Rhombus:
                         figures.Add(new ClassRhombus(point, size1, size2));
                         break;
-                    case (int)TypeFigute.Square:
+                    case TypeFigure.Square:
                         figures.Add(new ClassSquare(point, size1));
                         break;
-                    case (int)TypeFigute.Trapezium:
+                    case TypeFigure.Trapezium:
                         figures.Add(new ClassTrapezium(point, size1, size2));
                         break;
                 }
-                types.Add(num);
             }
         }
         private void PictureBoxRefresh()
@@ -214,12 +213,12 @@ namespace Lab_5
         {
             if (CheckRound.Checked)
             {
-                sel_type = (int)SelectFigure.Round;
+                sel_type = SelectFigure.Round;
                 CheckQuadrangular.Checked = false;
             }
             else if (!CheckRound.Checked && !CheckQuadrangular.Checked)
             {
-                sel_type = (int)SelectFigure.NotSelect;
+                sel_type = SelectFigure.NotSelect;
             }
             pictureBox1.Focus();
         }
@@ -228,12 +227,12 @@ namespace Lab_5
         {
             if (CheckQuadrangular.Checked)
             {
-                sel_type = (int)SelectFigure.Quadrangular;
+                sel_type = SelectFigure.Quadrangular;
                 CheckRound.Checked = false;
             }
             else if (!CheckRound.Checked && !CheckQuadrangular.Checked)
             {
-                sel_type = (int)SelectFigure.NotSelect;
+                sel_type = SelectFigure.NotSelect;
             }
             pictureBox1.Focus();
         }

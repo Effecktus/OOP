@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassArray.cs" />
     <Compile Include="ClassCircle.cs" />
     <Compile Include="ClassEllipse.cs" />
     <Compile Include="ClassFigure.cs" />

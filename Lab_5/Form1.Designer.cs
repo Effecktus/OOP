@@ -38,8 +38,8 @@ namespace Lab_5
             this.Delete = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.CheckQuadrangles = new System.Windows.Forms.CheckBox();
-            this.CheckCircles = new System.Windows.Forms.CheckBox();
+            this.CheckQuadrangular = new System.Windows.Forms.CheckBox();
+            this.CheckRound = new System.Windows.Forms.CheckBox();
             this.ChangeCircles = new System.Windows.Forms.Button();
             this.ChangeQuadrangles = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
@@ -124,8 +124,8 @@ namespace Lab_5
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.CheckQuadrangles);
-            this.panel1.Controls.Add(this.CheckCircles);
+            this.panel1.Controls.Add(this.CheckQuadrangular);
+            this.panel1.Controls.Add(this.CheckRound);
             this.panel1.Location = new System.Drawing.Point(1234, 185);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(210, 118);
@@ -133,25 +133,25 @@ namespace Lab_5
             // 
             // CheckQuadrangles
             // 
-            this.CheckQuadrangles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CheckQuadrangles.Location = new System.Drawing.Point(3, 66);
-            this.CheckQuadrangles.Name = "CheckQuadrangles";
-            this.CheckQuadrangles.Size = new System.Drawing.Size(162, 49);
-            this.CheckQuadrangles.TabIndex = 9;
-            this.CheckQuadrangles.Text = "Многоугольники";
-            this.CheckQuadrangles.UseVisualStyleBackColor = true;
-            this.CheckQuadrangles.CheckedChanged += new System.EventHandler(this.CheckEllipse_CheckedChanged);
+            this.CheckQuadrangular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CheckQuadrangular.Location = new System.Drawing.Point(3, 66);
+            this.CheckQuadrangular.Name = "CheckQuadrangles";
+            this.CheckQuadrangular.Size = new System.Drawing.Size(162, 49);
+            this.CheckQuadrangular.TabIndex = 9;
+            this.CheckQuadrangular.Text = "Многоугольники";
+            this.CheckQuadrangular.UseVisualStyleBackColor = true;
+            this.CheckQuadrangular.CheckedChanged += new System.EventHandler(this.CheckQuadrangular_CheckedChanged);
             // 
             // CheckCircles
             // 
-            this.CheckCircles.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CheckCircles.Location = new System.Drawing.Point(3, 3);
-            this.CheckCircles.Name = "CheckCircles";
-            this.CheckCircles.Size = new System.Drawing.Size(162, 57);
-            this.CheckCircles.TabIndex = 8;
-            this.CheckCircles.Text = "Круглые фигуры";
-            this.CheckCircles.UseVisualStyleBackColor = true;
-            this.CheckCircles.CheckedChanged += new System.EventHandler(this.CheckCircle_CheckedChanged);
+            this.CheckRound.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CheckRound.Location = new System.Drawing.Point(3, 3);
+            this.CheckRound.Name = "CheckCircles";
+            this.CheckRound.Size = new System.Drawing.Size(162, 57);
+            this.CheckRound.TabIndex = 8;
+            this.CheckRound.Text = "Круглые фигуры";
+            this.CheckRound.UseVisualStyleBackColor = true;
+            this.CheckRound.CheckedChanged += new System.EventHandler(this.CheckCircle_CheckedChanged);
             // 
             // ChangeCircles
             // 
@@ -162,7 +162,7 @@ namespace Lab_5
             this.ChangeCircles.TabIndex = 8;
             this.ChangeCircles.Text = "Круглые";
             this.ChangeCircles.UseVisualStyleBackColor = true;
-            this.ChangeCircles.Click += new System.EventHandler(this.ChangeCircles_Click);
+            this.ChangeCircles.Click += new System.EventHandler(this.ChangeRound_Click);
             // 
             // ChangeQuadrangles
             // 
@@ -173,7 +173,7 @@ namespace Lab_5
             this.ChangeQuadrangles.TabIndex = 9;
             this.ChangeQuadrangles.Text = "Многоугольники";
             this.ChangeQuadrangles.UseVisualStyleBackColor = true;
-            this.ChangeQuadrangles.Click += new System.EventHandler(this.ChangeQuadrangles_Click);
+            this.ChangeQuadrangles.Click += new System.EventHandler(this.ChangeQuadrangular_Click);
             // 
             // label3
             // 
@@ -220,8 +220,8 @@ namespace Lab_5
         private Button Delete;
         private Label label2;
         private Panel panel1;
-        private CheckBox CheckCircles;
-        private CheckBox CheckQuadrangles;
+        private CheckBox CheckRound;
+        private CheckBox CheckQuadrangular;
         private Button ChangeCircles;
         private Button ChangeQuadrangles;
         private Label label3;

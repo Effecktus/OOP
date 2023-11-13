@@ -128,6 +128,16 @@ namespace Lab_5
             }
             PictureBoxRefresh();
         }
+        enum TypeFigute
+        {
+            Circle,
+            Ellipse,
+            Ring,
+            Rectangle,
+            Rhombus,
+            Square,
+            Trapezium,
+        }
 
         private void Create_Click(object sender, EventArgs e)
         {
@@ -141,25 +151,25 @@ namespace Lab_5
                 size2 = rand.Next(20, 100);
                 switch (num) 
                 {
-                    case 0:
+                    case (int)TypeFigute.Circle:
                         figures.Add(new ClassCircle(point, size1 / 2, Color.MediumAquamarine));
                         break;
-                    case 1:
+                    case (int)TypeFigute.Ellipse:
                         figures.Add(new ClassEllipse(point, size1, size2));
                         break;
-                    case 2:
+                    case (int)TypeFigute.Ring:
                         figures.Add(new ClassRing(point, size1 / 2));
                         break;
-                    case 3:
+                    case (int)TypeFigute.Rectangle:
                         figures.Add(new ClassRectangle(point, size1, size2));
                         break;
-                    case 4:
+                    case (int)TypeFigute.Rhombus:
                         figures.Add(new ClassRhombus(point, size1, size2));
                         break;
-                    case 5:
+                    case (int)TypeFigute.Square:
                         figures.Add(new ClassSquare(point, size1));
                         break;
-                    case 6:
+                    case (int)TypeFigute.Trapezium:
                         figures.Add(new ClassTrapezium(point, size1, size2));
                         break;
                 }
@@ -194,36 +204,41 @@ namespace Lab_5
             figures = new List<ClassFigure>();
             PictureBoxRefresh();
         }
-
+        enum SelectFigure
+        {
+            NotSelect,
+            Round,
+            Quadrangular
+        }
         private void CheckCircle_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckCircles.Checked)
+            if (CheckRound.Checked)
             {
-                sel_type = 1;
-                CheckQuadrangles.Checked = false;
+                sel_type = (int)SelectFigure.Round;
+                CheckQuadrangular.Checked = false;
             }
-            else if (!CheckCircles.Checked && !CheckQuadrangles.Checked)
+            else if (!CheckRound.Checked && !CheckQuadrangular.Checked)
             {
-                sel_type = -1;
+                sel_type = (int)SelectFigure.NotSelect;
             }
             pictureBox1.Focus();
         }
 
-        private void CheckEllipse_CheckedChanged(object sender, EventArgs e)
+        private void CheckQuadrangular_CheckedChanged(object sender, EventArgs e)
         {
-            if (CheckQuadrangles.Checked)
+            if (CheckQuadrangular.Checked)
             {
-                sel_type = 2;
-                CheckCircles.Checked = false;
+                sel_type = (int)SelectFigure.Quadrangular;
+                CheckRound.Checked = false;
             }
-            else if (!CheckCircles.Checked && !CheckQuadrangles.Checked)
+            else if (!CheckRound.Checked && !CheckQuadrangular.Checked)
             {
-                sel_type = -1;
+                sel_type = (int)SelectFigure.NotSelect;
             }
             pictureBox1.Focus();
         }
 
-        private void ChangeCircles_Click(object sender, EventArgs e)
+        private void ChangeRound_Click(object sender, EventArgs e)
         {
             gfx.Clear(Color.White);
             for (int i = 0; i < figures.Count; i++)
@@ -246,7 +261,7 @@ namespace Lab_5
             PictureBoxRefresh();
         }
 
-        private void ChangeQuadrangles_Click(object sender, EventArgs e)
+        private void ChangeQuadrangular_Click(object sender, EventArgs e)
         {
             gfx.Clear(Color.White);
             for (int i = 0; i < figures.Count; i++)

@@ -1,6 +1,6 @@
 ﻿namespace Lab_6
 {
-    partial class Form1
+    partial class FormArray
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -36,7 +36,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.AddButton = new System.Windows.Forms.Button();
             this.MoveButton = new System.Windows.Forms.Button();
-            this.ChangeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +53,10 @@
             // DeleteButton
             // 
             this.DeleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.DeleteButton.Location = new System.Drawing.Point(1338, 234);
+            this.DeleteButton.Location = new System.Drawing.Point(1338, 180);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(119, 48);
-            this.DeleteButton.TabIndex = 20;
+            this.DeleteButton.TabIndex = 6;
             this.DeleteButton.Text = "Уничтожить";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -65,10 +64,10 @@
             // EraseButton
             // 
             this.EraseButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.EraseButton.Location = new System.Drawing.Point(1338, 180);
+            this.EraseButton.Location = new System.Drawing.Point(1213, 180);
             this.EraseButton.Name = "EraseButton";
             this.EraseButton.Size = new System.Drawing.Size(119, 48);
-            this.EraseButton.TabIndex = 19;
+            this.EraseButton.TabIndex = 5;
             this.EraseButton.Text = "Стереть";
             this.EraseButton.UseVisualStyleBackColor = true;
             this.EraseButton.Click += new System.EventHandler(this.EraseButton_Click);
@@ -79,7 +78,7 @@
             this.ShowButton.Location = new System.Drawing.Point(1213, 126);
             this.ShowButton.Name = "ShowButton";
             this.ShowButton.Size = new System.Drawing.Size(119, 48);
-            this.ShowButton.TabIndex = 18;
+            this.ShowButton.TabIndex = 3;
             this.ShowButton.Text = "Показать";
             this.ShowButton.UseVisualStyleBackColor = true;
             this.ShowButton.Click += new System.EventHandler(this.ShowButton_Click);
@@ -90,7 +89,7 @@
             this.CreateButton.Location = new System.Drawing.Point(1213, 72);
             this.CreateButton.Name = "CreateButton";
             this.CreateButton.Size = new System.Drawing.Size(119, 48);
-            this.CreateButton.TabIndex = 17;
+            this.CreateButton.TabIndex = 1;
             this.CreateButton.Text = "Создать";
             this.CreateButton.UseVisualStyleBackColor = true;
             this.CreateButton.Click += new System.EventHandler(this.CreateButton_Click);
@@ -111,7 +110,7 @@
             this.AddButton.Location = new System.Drawing.Point(1338, 72);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(119, 48);
-            this.AddButton.TabIndex = 21;
+            this.AddButton.TabIndex = 2;
             this.AddButton.Text = "Добавить";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -122,28 +121,16 @@
             this.MoveButton.Location = new System.Drawing.Point(1338, 126);
             this.MoveButton.Name = "MoveButton";
             this.MoveButton.Size = new System.Drawing.Size(119, 48);
-            this.MoveButton.TabIndex = 22;
+            this.MoveButton.TabIndex = 4;
             this.MoveButton.Text = "Передвинуть";
             this.MoveButton.UseVisualStyleBackColor = true;
             this.MoveButton.Click += new System.EventHandler(this.MoveButton_Click);
             // 
-            // ChangeButton
-            // 
-            this.ChangeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.ChangeButton.Location = new System.Drawing.Point(1213, 180);
-            this.ChangeButton.Name = "ChangeButton";
-            this.ChangeButton.Size = new System.Drawing.Size(119, 48);
-            this.ChangeButton.TabIndex = 23;
-            this.ChangeButton.Text = "Изменить";
-            this.ChangeButton.UseVisualStyleBackColor = true;
-            this.ChangeButton.Click += new System.EventHandler(this.ChangeButton_Click);
-            // 
-            // Form1
+            // FormArray
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1476, 751);
-            this.Controls.Add(this.ChangeButton);
             this.Controls.Add(this.MoveButton);
             this.Controls.Add(this.AddButton);
             this.Controls.Add(this.DeleteButton);
@@ -152,8 +139,8 @@
             this.Controls.Add(this.CreateButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "FormArray";
+            this.Text = "FormArray";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -170,7 +157,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Button MoveButton;
-        private System.Windows.Forms.Button ChangeButton;
     }
 }
 

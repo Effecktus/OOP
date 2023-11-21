@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Lab_6
 {
-    public partial class Form1 : Form
+    public partial class FormList : Form
     {
-        ClassArray classArray;
+        ClassList classList;
         private readonly Graphics gfx;
         private readonly Bitmap bmp;
-        public Form1()
+        public FormList()
         {
             InitializeComponent();
             bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height);
@@ -24,7 +24,6 @@ namespace Lab_6
             gfx.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             gfx.Clear(Color.White);
         }
-
         private void PictureBoxRefresh()
         {
             pictureBox1.Image?.Dispose();
@@ -38,15 +37,17 @@ namespace Lab_6
 
         private void CreateButton_Click(object sender, EventArgs e)
         {
-            classArray = new ClassArray();
+            gfx.Clear(Color.White);
+            classList = new ClassList(gfx);
+            PictureBoxRefresh();
         }
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            if (classArray != null && !classArray.Null())
+            if (classList != null)
             {
                 gfx.Clear(Color.White);
-                classArray.Iterator(gfx, ClassArray.Method.Adding);
+                classList.Iterator(gfx, ClassList.Method.Adding);
                 PictureBoxRefresh();
             }
             else MesBox();
@@ -54,10 +55,10 @@ namespace Lab_6
 
         private void ShowButton_Click(object sender, EventArgs e)
         {
-            if (classArray != null && classArray.Anny())
+            if (classList != null && !classList.Null())
             {
                 gfx.Clear(Color.White);
-                classArray.Iterator(gfx, ClassArray.Method.Showing);
+                classList.Iterator(gfx, ClassList.Method.Showing);
                 PictureBoxRefresh();
             }
             else MesBox();
@@ -65,21 +66,10 @@ namespace Lab_6
 
         private void MoveButton_Click(object sender, EventArgs e)
         {
-            if (classArray != null && classArray.Anny())
+            if (classList != null && !classList.Null())
             {
                 gfx.Clear(Color.White);
-                classArray.Iterator(gfx, ClassArray.Method.Moving);
-                PictureBoxRefresh();
-            }
-            else MesBox();
-        }
-
-        private void ChangeButton_Click(object sender, EventArgs e)
-        {
-            if (classArray != null && classArray.Anny())
-            {
-                gfx.Clear(Color.White);
-                classArray.Iterator(gfx, ClassArray.Method.Changing);
+                classList.Iterator(gfx, ClassList.Method.Moving);
                 PictureBoxRefresh();
             }
             else MesBox();
@@ -94,7 +84,8 @@ namespace Lab_6
         private void DeleteButton_Click(object sender, EventArgs e)
         {
             gfx.Clear(Color.White);
-            classArray.Iterator(gfx, ClassArray.Method.Deleting);
+            classList.Iterator(gfx, ClassList.Method.Deleting);
+            classList = null;
             PictureBoxRefresh();
         }
     }

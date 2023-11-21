@@ -47,6 +47,8 @@
     <Compile Include="ClassCircle.cs" />
     <Compile Include="ClassEllipse.cs" />
     <Compile Include="ClassFigure.cs" />
+    <Compile Include="ClassList.cs" />
+    <Compile Include="ClassNode.cs" />
     <Compile Include="ClassPoint.cs" />
     <Compile Include="ClassQuadrangle.cs" />
     <Compile Include="ClassRectangle.cs" />

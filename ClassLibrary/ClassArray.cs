@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
-using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ClassLibrary
@@ -18,7 +15,6 @@ namespace ClassLibrary
             Adding,
             Showing,
             Moving,
-            Changing,
             Deleting
         }
         private enum TypeFigure
@@ -48,9 +44,6 @@ namespace ClassLibrary
                     break;
                 case Method.Moving:
                     Move(graphics);
-                    break;
-                case Method.Changing:
-                    Changing(graphics);
                     break;
                 case Method.Deleting:
                     Delete();
@@ -122,36 +115,6 @@ namespace ClassLibrary
                 }
             }
         }
-        private void Changing(Graphics graphics)
-        {
-            foreach (var figure in figures)
-            {
-                if (figure is ClassEllipse ellipse)
-                {
-                    ellipse.ChangeSize(graphics, rand.Next(5, Math.Min(ellipse.Point.X - (ellipse.Width_Size / 2) + 5, 1160 - ellipse.Point.X -
-                        (ellipse.Width_Size / 2) - 5)), rand.Next(5, Math.Min(ellipse.Point.Y - (ellipse.Height_Size / 2) + 5, 750 - ellipse.Point.Y -
-                        (ellipse.Height_Size / 2) - 5)));
-                }
-                else if (figure is ClassCircle circle)
-                {
-                    circle.ChangeRadius(graphics, rand.Next(1, Math.Min(Math.Min(circle.Point.X - circle.Radius, circle.Point.Y - circle.Radius),
-                        Math.Min(1160 - circle.Point.X - circle.Radius, 750 - circle.Point.Y - circle.Radius))));
-                }
-                else if (figure is ClassSquare square)
-                {
-                    square.ChangeSize(graphics, rand.Next(1, Math.Min(Math.Min(square.Point.X - square.Width_Size, square.Point.Y - square.Width_Size),
-                        Math.Min(1160 - square.Point.X - square.Width_Size, 750 - square.Point.Y - square.Width_Size))));
-                }
-                else
-                {
-                    (figure as ClassQuadrangle).ChangeSize(graphics, rand.Next(5, Math.Min((figure as ClassQuadrangle).Point.X -
-                        ((figure as ClassQuadrangle).Width_Size / 2) + 5, 1160 - (figure as ClassQuadrangle).Point.X -
-                        ((figure as ClassQuadrangle).Width_Size / 2) - 5)), rand.Next(5, Math.Min((figure as ClassQuadrangle).Point.Y -
-                        ((figure as ClassQuadrangle).Height_Size / 2) + 5, 750 - (figure as ClassQuadrangle).Point.Y -
-                        ((figure as ClassQuadrangle).Height_Size / 2) - 5)));
-                }
-            }
-        }
         private void Delete()
         {
             figures.Clear();
@@ -162,9 +125,9 @@ namespace ClassLibrary
             if (!Null()) return figures.Any();
             else return false;
         }
-        public bool Null() 
+        public bool Null()
         {
-            return figures == null;   
+            return figures == null;
         }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using System.Drawing;
-using System.Windows.Forms;
 
 namespace ClassLibrary
 {
@@ -16,7 +15,7 @@ namespace ClassLibrary
         {
 
         }
-        public virtual void MoveTo(Graphics canvas, int newX, int newY) 
+        public virtual void MoveTo(Graphics canvas, int newX, int newY)
         {
             Point.ChangeCords(newX, newY);
             Show(canvas);

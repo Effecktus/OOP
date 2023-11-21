@@ -1,9 +1,6 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-
-namespace ClassLibrary
+﻿namespace ClassLibrary
 {
-    public class ClassPoint 
+    public class ClassPoint
     {
         public int X { get; set; }
         public int Y { get; set; }
